@@ -35,3 +35,8 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Résultats
+
+
+En suivant les consignes j'ai utilisé React Hooks {useState} pour faire un élément <button> qui en cliquant va déclencher une événement modifiant l’état de {useState} "toggle", donc j'ai ajouter le composent "Offers.jsx".
