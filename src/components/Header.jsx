@@ -1,5 +1,6 @@
 import React from 'react';
 import '../design/Header.css';
+import Offers from './Offers.jsx';
 
 export default function Header() {
   return (
@@ -15,7 +16,6 @@ export default function Header() {
       <section className="hero">
         <h1>Bienvenue sur Plateforme d'Hébergement Web</h1>
         <p>Le meilleur choix pour héberger vos sites web en toute sécurité.</p>
-        <a href="#pricing" className="cta">Voir les avantages</a>
       </section>
     </header>
   );
