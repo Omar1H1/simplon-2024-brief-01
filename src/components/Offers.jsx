@@ -1,13 +1,17 @@
 import React from "react";
-import { useState } from "react";
+  import { useState } from "react";
 import '../design/Offers.css';
 
 export default function PaymantPlans () {
         const [toggle, setToggle] = useState(false);
 
+        function handleButtonClick () {
+          setToggle(!toggle)
+        }
+
         return (
             <>
-            <button onClick={() => setToggle(!toggle)} className="btn-toggle">
+            <button onClick={handleButtonClick} className="btn-toggle">
                 Voir les tarifs
             </button>
             {toggle && (
