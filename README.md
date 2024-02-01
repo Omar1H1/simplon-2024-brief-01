@@ -1,42 +1,36 @@
-# Landing Page
 
-This project serve the Landing page from our company.
+J'ai crée un "component" Offers.jsx et j'ai importer useState Hook 
 
-## Available Scripts
+```jsx
+import { useState } from "react";
+```
+---
 
-In the project directory, you can run:
+En suite J'ai déclaré le "state" avec [Array Destructuing](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) 
 
-### `npm install`
+```jsx
+const [toggle, setToggle] = useState(false);
+```
+---
 
-Install all dependencies needed to run the project.\
-In development process, this is most often followed by `npm start`
+Apres J'ai crée un JSX élément "Button" avec Onclick evénement pour modifié le "State" dynamiquement
 
-### `npm start`
+``` jsx
+<button onClick={() => setToggle(!toggle)} className="btn-toggle">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Voir les tarifs
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+</button>
+```
+---
 
-### `npm run build`
+Finalement j'ai utilité le "Logical AND (&&)"  opérateur afin d'afficher conditionnellement les tarifs :
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```jsx
+{toggle && montre qqchose};
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Au départ toggle a la valuer "false" comme on a annoncé dans le "useState(false)", en cliquant le "Button" on peut changer le valeur entre false et true "afficher et non afficher" les tarifs.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-## Résultats
-
-
-En suivant les consignes j'ai utilisé React Hooks {useState} pour faire un élément <button> qui en cliquant va déclencher une événement modifiant l’état de {useState} "toggle", donc j'ai ajouter le composent "Offers.jsx".
+---
+un moyen pour amélioré mon code c'est de créer une function "handleClick" pour rendre notre fonction ré-utilisable dans d'autre composant de notre application et c'est l’avantage de utiliser react.   
